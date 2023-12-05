@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#image-container {
+    float: left;
+    margin-right: 20px;
+}
+
+#form-container {
+    float: left;
+}
+
+#person-image {
+    width: 1000px;
+    /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto;
+    /* Mantiene la proporción original de la imagen */
+}
+
+#sport-select,
+#person-name,
+button {
+    display: block;
+    margin-bottom: 10px;
+}

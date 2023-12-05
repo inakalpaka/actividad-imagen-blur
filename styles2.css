@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#image-container {
+    float: left;
+    position: relative;
+    /* Permite posicionar elementos internos relativos a este contenedor */
+    margin-right: 20px;
+}
+
+#person-image {
+    width: 200px;
+    height: auto;
+}
+
+.rectangle {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo negro con transparencia */
+    border: 2px solid red;
+    /* Borde rojo */
+    cursor: pointer;
+}
+
+#form-container {
+    float: left;
+}
+
+#sport-select,
+#person-name,
+button,
+#rectangle-size {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#result {
+    font-weight: bold;
+    color: green;
+}

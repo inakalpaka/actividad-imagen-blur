@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Verificar Persona</title>
+</head>
+
+<body>
+
+    <div>
+        <div id="image-container">
+            <img id="person-image" src="" alt="Persona">
+            <div class="rectangle" id="rectangle1"></div>
+            <div class="rectangle" id="rectangle2"></div>
+            <!-- Puedes agregar más rectángulos según sea necesario -->
+        </div>
+
+        <div id="form-container">
+            <label for="sport-select">Selecciona un deporte:</label>
+            <select id="sport-select" onchange="changeImage()">
+                <option value="futbol">Fútbol</option>
+                <option value="baloncesto">Baloncesto</option>
+                <!-- Agrega más opciones según sea necesario -->
+            </select>
+
+            <label for="rectangle-size">Tamaño del rectángulo:</label>
+            <input type="range" id="rectangle-size" min="10" max="100" value="50">
+
+            <label for="person-name">Nombre de la persona:</label>
+            <input type="text" id="person-name">
+            <button onclick="checkName()">Verificar</button>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+
+</body>
+
+</html>
