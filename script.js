@@ -1,56 +1,45 @@
-function changeImage() {
-    var sportSelect = document.getElementById("sport-select");
-    var personImage = document.getElementById("person-image");
+document.addEventListener("DOMContentLoaded", function () {
+    actualizarImagen();
+});
 
-    // Obtén el valor seleccionado del deporte
-    var selectedSport = sportSelect.value;
+function actualizarImagen() {
+    var disciplinaSeleccionada = document.getElementById("disciplina").value;
+    var imagen = document.getElementById("imagen");
 
-    // Asigna la imagen correspondiente según el deporte seleccionado
-    if (selectedSport === "futbol") {
-        personImage.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKhvcBcETxVmlUUHbpdWsTWbvM2pqHj54Rlw&usqp=CAU";
-    } else if (selectedSport === "baloncesto") {
-        personImage.src = "https://cdn.charitystars.com/cache/resizedcrop-196fe23c8916c44c1c9061b27a6f6104-840x630.jpg";
+    // Lógica para obtener la imagen según la disciplina seleccionada
+    // Puedes agregar más lógica y disciplinas según tus necesidades
+
+    switch (disciplinaSeleccionada) {
+        case "artista musical":
+            imagen.src = "https://www.colormusic.cl/wp-content/uploads/2023/01/Jonathan-Davis-Korn.jpeg";
+            break;
+        case "artista marcial":
+            imagen.src = "url_de_la_imagen_musica.jpg";
+            break;
+        case "jugador de futbol":
+            imagen.src = "";
+        case "juego":
+            imagen.src = "";
+        // Agrega más casos según sea necesario
+        default:
+            break;
     }
-    // Agrega más casos según sea necesario
 }
 
-function checkName() {
-    var personNameInput = document.getElementById("person-name");
-    var personImage = document.getElementById("person-image");
+function verificarAdivinanza() {
+    var respuestaUsuario = document.getElementById("adivinanza").value;
 
-    // Obtén el nombre ingresado y compáralo con el nombre asociado a la imagen
-    var enteredName = personNameInput.value;
-    var expectedName = getExpectedName(personImage.src); // Debes implementar esta función
+    // Lógica para verificar la respuesta del usuario
+    // Puedes comparar la respuesta con la correcta y mostrar un mensaje
 
-    if (enteredName === expectedName) {
-        Swal.fire({
-            title: "bien hecho",
-            text: "tu puntage es de:",
-            icon: "success"
-        });
+    // Ejemplo de mensaje simple
+    if (respuestaUsuario.toLowerCase() === "nombre_correcto") {
+        alert("¡Respuesta correcta!");
+        // Puedes agregar más acciones aquí
     } else {
-        Swal.fire({
-            icon: "error",
-            title: "te equibocaste",
-            text: "el jugador que elegiste es incorrecto",
-        });
+        alert("Respuesta incorrecta. Intenta de nuevo.");
     }
+
+    // Actualizar la imagen para la siguiente adivinanza
+    actualizarImagen();
 }
-
-function getExpectedName(imageSrc) {
-    // Implementa lógica para obtener el nombre asociado a la imagen
-    // Puedes utilizar un objeto, base de datos, o alguna otra estructura de datos
-    // que asocie cada imagen con su respectivo nombre.
-    // Por ejemplo:
-    var namesMap = {
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKhvcBcETxVmlUUHbpdWsTWbvM2pqHj54Rlw&usqp=CAU": "messi",
-        "https://cdn.charitystars.com/cache/resizedcrop-196fe23c8916c44c1c9061b27a6f6104-840x630.jpg": "shaq"
-    };
-
-    return namesMap[imageSrc] || "NombreDesconocido";
-}
-
-// Carga la imagen inicial al cargar la página
-window.onload = function () {
-    changeImage();
-};

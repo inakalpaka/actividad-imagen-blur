@@ -1,26 +1,80 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-#image-container {
-    float: left;
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imagen-container {
     margin-right: 20px;
 }
 
-#form-container {
-    float: left;
+#imagen {
+    max-width: 100%;
+    border: 5px solid #ddd;
+    border-radius: 8px;
+    z-index: 1;
 }
 
-#person-image {
-    width: 1000px;
-    /* Ajusta el ancho de la imagen según tus necesidades */
-    height: auto;
-    /* Mantiene la proporción original de la imagen */
+.info-container {
+    text-align: center;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-#sport-select,
-#person-name,
-button {
-    display: block;
+h1,
+label {
+    color: #ddd;
+}
+
+#disciplina {
     margin-bottom: 10px;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.slider label {
+    margin-bottom: 5px;
+}
+
+.question-container {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+#adivinanza {
+    margin-top: 10px;
+    padding: 5px;
+    width: 200px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #2e6130;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
 }
