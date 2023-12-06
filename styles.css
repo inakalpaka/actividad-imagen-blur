@@ -8,10 +8,20 @@ body {
     height: 100vh;
 }
 
+
 .container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    /* Cambiado de 'center' a 'space-between' */
+}
+
+#puntos-container {
+    color: white;
+}
+
+#puntos {
+    color: white;
 }
 
 #imagen-container {
@@ -77,4 +87,13 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+.rectangle {
+    position: absolute;
+    /* Cambiado a un azul con opacidad */
+    backdrop-filter: blur(10px);
+    /* Agregado el efecto de blur */
+    border: 1px solid #2980b9;
+    cursor: pointer;
 }

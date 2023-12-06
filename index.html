@@ -13,6 +13,8 @@
         <div id="imagen-container">
             <img id="imagen" src="" alt="Imagen para adivinar">
         </div>
+        <div id="rectangles-container"></div>
+
         <div class="info-container">
             <h1>Adivina la Persona</h1>
 
@@ -21,20 +23,26 @@
                 <option value="artista musical">artista musical</option>
                 <option value="artista marcial">artista marcial</option>
                 <option value="jugador de futbol">jugador de futbol</option>
-                <option value="juego">juego</option>
+                <option value="jugador de basquet">jugador de basquet</option>
                 <!-- Agrega más disciplinas según sea necesario -->
             </select>
-
-            <div class="slider">
-                <label for="blur-slider">Blur:</label>
-                <input type="range" id="blur-slider" min="0" max="20" value="0">
-                <span id="blur-value">0</span>
+            <div id="puntos-container">
+                <p>Puntos: <span id="puntos">0</span></p>
+            </div>
+            <div>
+                <label for="width-slider">Cantidad de Rectángulos en Ancho:</label>
+            </div>
+            <div>
+                <input type="range" id="width-slider" min="1" max="20" value="1">
+                <span id="width-slider-value">1</span>
             </div>
 
-            <div class="slider">
-                <label for="size-slider">Tamaño de rectángulos:</label>
-                <input type="range" id="size-slider" min="0" max="100" value="0">
-                <span id="size-value">0</span>
+            <div>
+                <label for="height-slider">Cantidad de Rectángulos en Alto:</label>
+            </div>
+            <div>
+                <input type="range" id="height-slider" min="1" max="20" value="1">
+                <span id="height-slider-value">1</span>
             </div>
 
             <div class="question-container">
@@ -43,9 +51,10 @@
             </div>
 
             <button onclick="verificarAdivinanza()">Probar</button>
+
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
 </body>
 
